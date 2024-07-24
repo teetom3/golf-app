@@ -1,7 +1,8 @@
 // frontend/src/components/Register.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-routerszed-dom';
+import { useNavigate } from 'react-router-dom';
+import "../styles/Register.css"
 
 function Register() {
   const [firstName, setFirstName] = useState('');
@@ -22,13 +23,13 @@ function Register() {
   };
 
   return (
-    <form onSubmit={handleRegister}>
-      <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="First Name" required />
-      <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Last Name" required />
+    <form className="register" onSubmit={handleRegister}>
+      <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="Prenom" required />
+      <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Nom" required />
       <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
-      <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Address" required />
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
-      <button type="submit">Register</button>
+      <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Addresse" required />
+      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Mot de passe" required />
+      <button type="submit">Creer un compte</button>
     </form>
   );
 }

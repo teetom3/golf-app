@@ -1,6 +1,7 @@
 // frontend/src/components/Dashboard.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import "../styles/Dashboard.css";
 
 function Dashboard() {
   const [courses, setCourses] = useState([]);
@@ -34,19 +35,20 @@ function Dashboard() {
   };
 
   return (
-    <div>
-      <h1>Dashboard</h1>
+    <div className='container'>
+      <div id="overlay"></div>
+      <h1>Mes cours</h1>
       <form onSubmit={handleReserve}>
         <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
         <input type="time" value={startTime} onChange={(e) => setStartTime(e.target.value)} required />
         <input type="time" value={endTime} onChange={(e) => setEndTime(e.target.value)} required />
-        <button type="submit">Reserve</button>
+        <button type="submit">Reserver</button>
       </form>
-      <h2>Your Courses</h2>
+      <h2>Vos cours</h2>
       <ul>
         {courses.map((course) => (
           <li key={course._id}>
-            {course.date} {course.startTime} - {course.endTime} {course.approved ? 'Approved' : 'Pending'}
+            {course.date} {course.startTime} - {course.endTime} {course.approved ? 'Approuvé' : 'En attente de confirmation'}
           </li>
         ))}
       </ul>

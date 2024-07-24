@@ -1,0 +1,79 @@
+/* Hero Section CSS */
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-container {
+    
+    height: 100vh;
+    display: flex;
+    
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .hero-content {
+    background: rgba(255, 255, 255, 0.2); /* Couleur de fond transparente */
+    backdrop-filter: blur(10px); /* Effet de flou */
+    -webkit-backdrop-filter: blur(10px); /* Support pour Safari */
+    border-radius: 15px; /* Bords arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre */
+    padding: 40px; /* Espacement interne */
+    color: rgb(238, 238, 238); /* Couleur du texte */
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-button {
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-button:hover {
+    background-color: #218838;
+  }
+  
+
+  .about-container {
+    padding: 20px;
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  .grid-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Assure que les images restent carrées */
+    object-fit: cover; /* Maintient le contenu dans les limites de l'image */
+  }
+  

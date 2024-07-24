@@ -1,0 +1,5 @@
+.video-background {
+    position: fixed;
+   
+    z-index: -55;
+}
